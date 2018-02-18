@@ -8,7 +8,7 @@ only difference is that iam building it with docker.
 
 ## usage
 ```
-git clone http://localhost:3000/mxkle/django-tutorial.git
+git clone https://github.com/mxkle/django-tutorial.git
 cd django-tutorial
 docker-compose up
 ```
