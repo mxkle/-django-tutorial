@@ -2,7 +2,7 @@ pipeline {
   agent {
     docker {
       image 'python:3'
-      args '-p 5000:5000'
+      args '-v /app:/app -p 5000:5000'
     }
     
   }
