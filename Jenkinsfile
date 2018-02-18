@@ -2,17 +2,14 @@ pipeline {
   agent {
     docker {
       image 'python:3'
-      args '-v /app/:/app -p 5000:5000'
+      args '-p 5000:5000'
     }
     
   }
   stages {
     stage('Setup') {
       steps {
-        dir(path: '/django-tutorial/') {
-          sh 'pwd'
-        }
-        
+        dir(path: '/django-tutorial/')
       }
     }
     stage('Build') {
