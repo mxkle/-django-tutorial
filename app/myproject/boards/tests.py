@@ -4,6 +4,9 @@ from django.test import TestCase
 from .views import boards
 
 class BoardsTests(TestCase):
+    def setUp(self):
+        Board.objects.create(name='Django', description='Django board.')
+
     def test_boards_view_status_code(self):
         url = reverse('boards')
         response = self.client.get(url)
