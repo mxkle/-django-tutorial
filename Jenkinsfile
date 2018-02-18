@@ -9,7 +9,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'python3 app/myproject/manage.py runserver 0:5000'
+        sh '''pip install --no-cache-dir -r app/requirements.txt
+&& python3 app/myproject/manage.py runserver 0:5000'''
       }
     }
   }
