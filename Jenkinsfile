@@ -7,6 +7,14 @@ pipeline {
     
   }
   stages {
+    stage('Setup') {
+      steps {
+        dir(path: '/django-tutorial/') {
+          pwd(tmp: true)
+        }
+        
+      }
+    }
     stage('Build') {
       steps {
         sh 'python3 myproject/manage.py runserver 0:5000'
