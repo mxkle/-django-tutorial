@@ -1,7 +1,8 @@
 pipeline {
   agent {
-    dockerfile {
-      filename 'Dockerfile'
+    docker {
+      image 'python:3'
+      args '-v ./app/:/app -p 5000:5000'
     }
     
   }
